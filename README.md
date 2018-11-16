@@ -22,7 +22,8 @@ $ ionic plugin add https://github.com/sandeepdillerao/cordova-plugin-otp-auto-ve
       var options = {
         delimiter : "code is",
         length : 6,
-        origin : "WAYSMS"
+        origin : "WAYSMS",
+        end_delimiter : "."
       };
       
       var success = function (otp) {
@@ -40,7 +41,7 @@ $ ionic plugin add https://github.com/sandeepdillerao/cordova-plugin-otp-auto-ve
 
 ##### delimiter :
 This is matching text just before the OTP string.
-Suppose your OTP sms is like "One time password for App is 1234"
+Suppose your OTP sms is like "One time password for App is 1234."
 then your delimiter will be "App is".
 
 ##### length : 
@@ -49,6 +50,9 @@ This is length of you OTP string. when otp sms received code will extract this l
 ##### origin :
 This is 6 digit senderID which your getting in SMS.
 eg. if your getting SMS from senderID TD-ABCDEF then origin = "ABCDEF"
+
+##### end_delimiter :
+If length is dynamic, can use this to get the password using delimiter and end_delimiter.
 
 ##### NOTE: Sender ID should be fixed one to work Auto OTP verification. 
 
