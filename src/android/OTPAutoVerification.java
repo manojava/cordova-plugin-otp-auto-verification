@@ -40,17 +40,10 @@ public class OTPAutoVerification extends CordovaPlugin {
             Log.i(TAG, options.toString());
             this.options = options;
             this.callbackContext = callbackContext;
-            if(cordova.hasPermission(SMS_READ_PERMISSION)) {
-                Log.i("OTPAutoVerification", "Has Permission");
-                startOTPListener(options, callbackContext);
-            }
-            else
-            {
-                getPermission(REQUEST_CODE);
-            }
+            startOTPListener(options, callbackContext);
 
             return true;
-        }else if (action.equals("stopOTPListener")) {
+        } else if (action.equals("stopOTPListener")) {
             stopOTPListener();
             return true;
         }
