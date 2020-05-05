@@ -12,7 +12,7 @@ $ cordova plugin add cordova-plugin-otp-auto-verification
 To install cordova-plugin-otp-auto-verification from npm, for ionic run:
 
 ```
-$ ionic plugin add https://github.com/sandeepdillerao/cordova-plugin-otp-auto-verification
+$ ionic plugin add https://github.com/manojava/cordova-plugin-otp-auto-verification
 ```
 
 
